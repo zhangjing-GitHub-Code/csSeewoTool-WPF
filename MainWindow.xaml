@@ -1,0 +1,51 @@
+﻿<Window x:Class="seewoTool_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:seewoTool_WPF"
+        mc:Ignorable="d"
+        Title="希沃工具箱" Height="450" Width="800">
+    <Grid>
+        <Border Margin="0,0,137,0">
+            <TabControl>
+
+                <TabItem Header="常用工具">
+                    <Grid Background="#FFE5E5E5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="44*"/>
+                            <ColumnDefinition Width="353*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock HorizontalAlignment="Left" Margin="21,19,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" Grid.ColumnSpan="2"><Run Language="zh-cn" Text="解除卡死"/></TextBlock>
+                        <Button Content="结束希沃白板进程" HorizontalAlignment="Left" Margin="21,59,0,0" VerticalAlignment="Top" Click="btnKillEN5_clk" Grid.ColumnSpan="2" Height="24" Width="104"/>
+                        <Button Content="结束PPT工具" Click="btnKillPPTSvc_clk" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="21,97,0,0" VerticalAlignment="Top" Width="104"/>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="希沃白板5">
+                    <Grid Background="#FFE5E5E5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="44*"/>
+                            <ColumnDefinition Width="353*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock HorizontalAlignment="Left" Margin="31,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="39" Width="184" Grid.ColumnSpan="2" FontSize="30"><Run Language="zh-cn" Text="启动闪屏管理"/></TextBlock>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Geogebra">
+                    <Grid Background="#FFE5E5E5">
+                        <Grid.ColumnDefinitions>
+                            <!--ColumnDefinition Width="44*"/-->
+                            <ColumnDefinition Width="353*"/>
+                        </Grid.ColumnDefinitions>
+                        <Border x:Name="DownloadStat" Visibility="Visible">
+                            <ProgressBar Visibility="Visible" Height="10" Width="100" Margin="10,10,547,388" Value="114" />
+                        </Border>
+                        <Border></Border>
+                    </Grid>
+                </TabItem>
+            </TabControl>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="800,435,0,0" VerticalAlignment="Top" Width="21"/>
+        <TextBox x:Name="LogTxt" IsReadOnly="True" HorizontalAlignment="Left" Margin="663,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="375" Width="127"/>
+        <Label Content="日志" HorizontalAlignment="Left" Margin="668,25,0,0" VerticalAlignment="Top" Width="122"/>
+    </Grid>
+</Window>
